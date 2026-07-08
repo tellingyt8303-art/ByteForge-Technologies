@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sign Up — ByteForge Technologies</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-head">
+      <a href="index.html" class="logo">ByteForge <span>Technologies</span></a>
+      <h1 style="font-family:var(--mono);font-size:22px;margin-top:22px">Create your account</h1>
+      <p style="color:var(--muted);font-size:14px;margin-top:6px">Track your projects and requests in one place</p>
+    </div>
+
+    <form id="signupForm" class="card">
+      <div class="form-group">
+        <label class="form-label">FULL NAME</label>
+        <input type="text" class="form-input" id="name" placeholder="Your name" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">EMAIL</label>
+        <input type="email" class="form-input" id="email" placeholder="you@email.com" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">PHONE</label>
+        <input type="tel" class="form-input" id="phone" placeholder="+91 XXXXX XXXXX" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">PASSWORD</label>
+        <input type="password" class="form-input" id="password" placeholder="Min. 6 characters" minlength="6" required/>
+      </div>
+      <button type="submit" class="btn btn-solid btn-block" id="signupBtn">Create Account</button>
+      <div class="form-error" id="formError"></div>
+
+      <div class="divider">or</div>
+      <button type="button" class="btn btn-outline btn-block" id="googleBtn">Continue with Google</button>
+    </form>
+
+    <div class="auth-foot">Already have an account? <a href="login.html">Log in</a></div>
+  </div>
+</div>
+
+<script type="module">
+  import { initSignup } from "./auth.js";
+  initSignup();
+</script>
+</body>
+</html>
